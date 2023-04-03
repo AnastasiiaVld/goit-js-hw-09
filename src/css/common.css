@@ -16,3 +16,28 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.main {
+  display: grid;
+  place-content: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.btn {
+  width: 100px;
+    height: 100px;
+    line-height: 50px;
+    position: relative;
+    border: 1px solid white;
+    padding: 0 1rem;
+}
+
+.main-btn {
+  display: flex;
+}
+
+.btn-stop{
+  margin-left: 30px;
+}
