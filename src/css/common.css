@@ -41,3 +41,20 @@ img {
 .btn-stop{
   margin-left: 30px;
 }
+
+.timer {
+display: flex;
+}
+
+.field {
+  font-family: sans-serif;
+
+  display: grid;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.value {
+  font-size: 30px;
+}
