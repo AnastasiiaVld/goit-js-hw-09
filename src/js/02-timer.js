@@ -51,6 +51,10 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
+function addLeadingZero(value) {
+  return String(value).padStart(2, 0);
+}
+
 function onCreateTimer() {
   timer = setInterval(() => {
     startBtnEl.disabled = true;
@@ -61,10 +65,10 @@ function onCreateTimer() {
 
     const { days, hours, minutes, seconds } = convertMs(deff);
 
-    dataDaysEl.textContent = days;
-    dataHoursEl.textContent = hours;
-    dataMinutesEl.textContent = minutes;
-    dataSecondsEl.textContent = seconds;
+    dataDaysEl.textContent = addLeadingZero(days);
+    dataHoursEl.textContent = addLeadingZero(hours);
+    dataMinutesEl.textContent = addLeadingZero(minutes);
+    dataSecondsEl.textContent = addLeadingZero(seconds);
 
     if (deff <= 1000) {
       clearInterval(timer);
