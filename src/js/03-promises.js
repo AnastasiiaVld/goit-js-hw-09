@@ -17,8 +17,8 @@ function onsubmitBtn(e) {
   amount = +formAmount.value;
 
   for (let i = 0; i < amount; i++) {
-    delayNew = step * i + firstStep;
-    createPromise(i + 1, delayNew)
+    const newDelay = step * i + firstStep;
+    createPromise(i + 1, newDelay)
       .then(data => Notiflix.Notify.success(data))
       .catch(error => Notiflix.Notify.failure(error));
   }
